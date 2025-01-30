@@ -8,4 +8,5 @@ aplikasi ini di buat untuk mempermudah guru dalam memanagement siswa/i
   - Data Mutasi Keluar
   - Data Absen
   - Data Rapot
-aplikasi ini di buat dengan bahasa pemrograman : HTML, CSS, dan JS
+
+<BR>aplikasi ini di buat dengan bahasa pemrograman : HTML, CSS, dan JS
