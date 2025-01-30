@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description" content="Flexy Admin Lite is powerful and clean admin dashboard template, inspired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>SimWakel ||  Dashboard</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/wakel.png">
+    <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <link href="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'YourPrimaryFont', 'FallbackFont', sans-serif;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+        <!-- <p id="selected-class" class="text-lg font-medium hidden"></p> -->
+    
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin6">
+                    <a class="navbar-brand" href="home.html">
+                        <b class="logo-icon">
+                            <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="dark-logo" />
+                            <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="light-logo" />
+                        </b>
+                        <span class="logo-text">
+                           <strong>SimWakel</strong> 
+                        </span>
+                    </a>
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav float-start me-auto">
+                        <li class="nav-item search-box">
+                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter">
+                                <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav float-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/users/th.jpeg" alt="User Profile" class="rounded-circle" width="31">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="logout()">
+                                    <i class="ti-user m-r-5 m-l-5"></i> Logout
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="home.html" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard"></i>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="rekap.html" aria-expanded="false">
+                            <i class="mdi mdi-border-all"></i>
+                            <span class="hide-menu">Rekap Absen</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="javascript:void(0);" aria-expanded="false">
+                            <i class="mdi mdi-database"></i>
+                            <span class="hide-menu">Data Master</span>
+                        </a>
+                        <ul class="collapse first-level">
+                            <li class="sidebar-item">
+                                <a href="datas.html" class="sidebar-link">
+                                    <i class="mdi mdi-school"></i>
+                                    <span class="hide-menu">Data Siswa Binaan</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="mutasim.html" class="sidebar-link">
+                                    <i class="mdi mdi-account-switch"></i>
+                                    <span class="hide-menu">Mutasi Masuk</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="mutasik.html" class="sidebar-link">
+                                    <i class="mdi mdi-account-switch"></i>
+                                    <span class="hide-menu">Mutasi Keluar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="rapot.html" class="sidebar-link">
+                            <i class="mdi mdi-download"></i>
+                            <span class="hide-menu">Data Rapot</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="javascript:void(0);" class="sidebar-link" onclick="logout()">
+                            <i class="mdi mdi-logout"></i>
+                            <span class="hide-menu">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="page-wrapper">
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 d-flex align-items-center">
+                                <li class="breadcrumb-item"><a href="home.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                        <h1 class="mb-0 fw-bold">Dashboard</h1>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <a href="rekap.html" class="btn btn-primary text-white" target="_blank">Download Absen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex align-items-center">
+                                    <div>
+                                        <h4 class="card-title">Jumlah Siswa/i</h4>
+                                        <h6 class="card-subtitle">SMK Muhammadiyah 1 Pringsewu</h6>
+                                    </div>
+                                    <div class="ms-auto d-flex no-block align-items-center">
+                                        <!-- <ul class="list-inline dl d-flex align-items-center m-r-15 m-b-0">
+                                            <li class="list-inline-item d-flex align-items-center text-info"><i class="fa fa-circle font-10 me-1"></i> Ample</li>
+                                            <li class="list-inline-item d-flex align-items-center text-primary"><i class="fa fa-circle font-10 me-1"></i> Pixel</li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+                                 <!-- title -->
+                                 <div class="table-responsive">
+                                    <table class="table mb-0 table-hover align-middle text-nowrap" id="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">Nama Kelas</th>
+                                                <th class="border-top-0">Perempuan</th>
+                                                <th class="border-top-0">Laki-Laki</th>
+                                                <th class="border-top-0">Jumlah All</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">List Absen</h4>
+                                <h6 class="card-subtitle">ini adalah list absen hari ini</h6>
+                                <div id="stats-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+
+            <footer class="footer text-center">
+                SimWakel SMK Muhammadiyah 1 Pringsewu Designed and Developed by <a href="https://jeriwilaga.github.io/Portofolio/">AgaDevelopment</a>.
+            </footer>
+        </div>
+    </div>
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <script src="js/waves.js"></script>
+    <script src="js/sidebarmenu.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="js/pages/dashboards/dashboard1.js"></script>
+    <script>
+          // Check for existing history on page load
+          const history = localStorage.getItem('history');
+            if (!history) {
+                // If no history exists, redirect to login page
+                window.location.href = 'index.html'; // Change 'login.html' to your actual login page
+            }
+
+        // Get the selected class from local storage
+        const selectedClass = localStorage.getItem('selectedClass');
+
+        // Display the selected class
+        const selectedClassElement = document.getElementById('selected-class');
+        if (selectedClass) {
+            selectedClassElement.textContent = `${selectedClass}`;
+        } else {
+            selectedClassElement.textContent = 'No class selected yet.';
+        }
+    </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzrYZKeruzsHR-cn3FRjN1EZqzKxDpremmPU10zf5A8E06WlEll5gueOe96rUAPELMYaQ/exec';
+    const statsContainer = document.querySelector('#stats-container');
+
+    document.addEventListener('DOMContentLoaded', loadData);
+
+    function loadData() {
+        const selectedClass = localStorage.getItem('selectedClass') || '';
+        console.log('Jurusan from localStorage:', selectedClass); // Debugging line
+
+        if (!selectedClass) {
+            console.error('No class selected!'); // Error log if empty
+            statsContainer.innerHTML = '<p>No class selected yet.</p>'; // Inform user
+            return;
+        }
+
+        statsContainer.innerHTML = '';
+
+        fetch(`${scriptURL}?action=read&jurusan=${encodeURIComponent(selectedClass)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetched data:', data);
+
+                if (data.length === 0) {
+                    console.log('Tidak Ada Absen Hari ini');
+                    statsContainer.innerHTML = '<p>Tidak Ada Absen Hari ini</p>';
+                    return;
+                }
+
+                data.forEach(stat => {
+                    const statElement = document.createElement('div');
+                    statElement.classList.add('py-3', 'd-flex', 'align-items-center');
+
+                    const iconElement = document.createElement('span');
+                    iconElement.classList.add('btn', 'btn-circle', 'd-flex', 'align-items-center');
+                    iconElement.innerHTML = `<i class="mdi mdi-${getIcon(stat.keterangan)} fs-4"></i>`;
+
+                    const infoElement = document.createElement('div');
+                    infoElement.classList.add('ms-3');
+                    infoElement.innerHTML = `
+                        <h5 class="mb-0 fw-bold">${stat.nama}</h5>
+                        <span class="text-muted fs-6">${stat.nis}</span>
+                    `;
+
+                    const badgeElement = document.createElement('div');
+                    badgeElement.classList.add('ms-auto');
+                    
+                    // Set badge background color based on status
+                    const badgeColor = getBadgeColor(stat.keterangan);
+                    badgeElement.innerHTML = `<span class="badge" style="background-color: ${badgeColor}; color: white;">${stat.keterangan}</span>`;
+
+                    statElement.style.color = getStatusColor(stat.keterangan);
+
+                    statElement.appendChild(iconElement);
+                    statElement.appendChild(infoElement);
+                    statElement.appendChild(badgeElement);
+
+                    statsContainer.appendChild(statElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading data!', error);
+                statsContainer.innerHTML = '<p>Error loading data. Please try again later.</p>';
+            });
+    }
+
+    function getIcon(keterangan) {
+        const icons = {
+            'Izin': 'star-circle',
+            'Sakit': 'comment-multiple-outline',
+            'Alfa': 'content-duplicate',
+            'bolos': 'diamond',
+            'scoring': 'cart-outline'
+        };
+        return icons[keterangan] || 'cart-outline';
+    }
+
+    // Define getBadgeColor function
+    function getBadgeColor(keterangan) {
+        const colors = {
+            'Izin': 'yellow',
+            'Sakit': 'green',
+            'Alfa': 'red',
+            'bolos': 'black',
+            'scoring': 'purple'
+        };
+        return colors[keterangan] || 'black';
+    }
+
+    function getStatusColor(keterangan) {
+        const colors = {
+            'Izin': 'yellow',
+            'Sakit': 'green',
+            'Alfa': 'red',
+            'bolos': 'black',
+            'scoring': 'purple'
+        };
+        return colors[keterangan] || 'black';
+    }
+</script>
+
+<script>
+  const apiEndpoint = 'https://script.google.com/macros/s/AKfycbz9FrtqjiUbUsNg0qvz2D5LmOlDnVyZoGW-Cn4aTPsE5xGhbEdvgORkV779q-_CFVmsTA/exec';
+const dataTableBody = document.querySelector('#data-table tbody');
+
+document.addEventListener('DOMContentLoaded', loadData);
+
+function loadData() {
+    const selectedClass = localStorage.getItem('selectedClass') || '';
+
+    if (!selectedClass) {
+        console.error('No class selected!');
+        return;
+    }
+
+    dataTableBody.innerHTML = ''; // Clear the table body
+
+    fetch(`${apiEndpoint}?action=read&jurusan=${encodeURIComponent(selectedClass)}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!Array.isArray(data) || data.length === 0) {
+                console.warn('No data available');
+                return;
+            }
+
+            data.forEach(stat => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="text-center">${stat.namaKelas}</td>
+                    <td  class="text-center">${stat.totalFemale}</td>
+                    <td  class="text-center">${stat.totalMale}</td>
+                    <td  class="text-center">${stat.totalAll}</td>
+                `;
+                dataTableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading data!', error);
+        });
+}
+</script>
+<script>
+    function logout() {
+        // Clear the history from local storage
+        localStorage.removeItem('history');
+        localStorage.removeItem('selectedClass');
+
+        // Redirect to index.html
+        window.location.href = 'index.html'; // Change 'index.html' to your actual homepage if different
+    }
+</script>
+</body>
+</html>

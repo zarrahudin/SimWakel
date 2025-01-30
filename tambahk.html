@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>SimWakel || Tambah Data Keluar</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/wakel.png">
+    <style>
+      body {
+          font-family: 'YourPrimaryFont', 'FallbackFont', sans-serif;
+      }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <!-- Custom CSS -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+      </svg>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="home.html">
+                      <b class="logo-icon">
+                          <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="dark-logo" />
+                          <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="light-logo" />
+                      </b>
+                      <span class="logo-text">
+                         <strong>SimWakel</strong> 
+                      </span>
+                  </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
+                                    class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                                      <ul class="navbar-nav float-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/users/th.jpeg" alt="User Profile" class="rounded-circle" width="31">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="logout()">
+                                    <i class="ti-user m-r-5 m-l-5"></i> Logout
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+          <nav class="sidebar-nav">
+              <ul id="sidebarnav">
+                  <li class="sidebar-item">
+                      <a class="sidebar-link waves-effect waves-dark sidebar-link" href="home.html" aria-expanded="false">
+                          <i class="mdi mdi-view-dashboard"></i>
+                          <span class="hide-menu">Dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sidebar-item">
+                      <a class="sidebar-link waves-effect waves-dark sidebar-link" href="rekap.html" aria-expanded="false">
+                          <i class="mdi mdi-border-all"></i>
+                          <span class="hide-menu">Rekap Absen</span>
+                      </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="javascript:void(0);" aria-expanded="false">
+                        <i class="mdi mdi-database"></i>
+                        <span class="hide-menu">Data Master</span>
+                    </a>
+                    <ul class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="datas.html" class="sidebar-link">
+                              <i class="mdi mdi-school"></i>
+                                <span class="hide-menu">Data Siswa Binaan</span>
+                            </a>
+                        </li>
+                          <li class="sidebar-item">
+                              <a href="mutasim.html" class="sidebar-link">
+                                  <i class="mdi mdi-account-switch"></i>
+                                  <span class="hide-menu">Mutasi Masuk</span>
+                              </a>
+                          </li>
+                          <li class="sidebar-item">
+                              <a href="mutasik.html" class="sidebar-link">
+                                  <i class="mdi mdi-account-switch"></i>
+                                  <span class="hide-menu">Mutasi Keluar</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="rapot.html" class="sidebar-link">
+                      <i class="mdi mdi-download"></i>
+                        <span class="hide-menu">Data Rapot</span>
+                    </a>
+                </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0);" class="sidebar-link" onclick="logout()">
+                        <i class="mdi mdi-logout"></i>
+                        <span class="hide-menu">Logout</span>
+                    </a>
+                </li>
+              </ul>
+          </nav>
+      </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 d-flex align-items-center">
+                              <li class="breadcrumb-item"><a href="home.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Mutasi Keluar</li>
+                            </ol>
+                          </nav>
+                        <h1 class="mb-0 fw-bold">Mutasi Keluar</h1> 
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="alert alert-success d-flex align-items-center d-none" role="alert" id="successAlert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                  <use xlink:href="#check-circle-fill"/>
+                </svg>
+                <div>
+                  <div id="response"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <form class="form-horizontal form-material mx-2" id="myForm" onsubmit="redirectToTambah(); return false;">
+                        <div class="form-group">
+                          <label class="col-md-12">Nama Lengkap</label>
+                          <div class="col-md-12">
+                            <input type="text" class="form-control form-control-line" id="fullName" name="fullName" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="example-email" class="col-md-12">Nis</label>
+                          <div class="col-md-12">
+                            <input type="number" class="form-control form-control-line" id="nis" name="nis" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-12">Gender</label>
+                          <div class="col-sm-12">
+                            <select class="form-select shadow-none form-control-line" id="gender" name="gender">
+                              <option value="Laki-Laki">Laki-Laki</option>
+                              <option value="Perempuan">Perempuan</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-12">Tanggal</label>
+                          <div class="col-md-12">
+                            <input type="date" class="form-control form-control-line" id="date" name="date" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-12">No Surat</label>
+                          <div class="col-md-12">
+                            <input type="text" class="form-control form-control-line" id="suratNumber" name="suratNumber">
+                            <small class="form-text text-muted">Note: No surat silahkan minta kepada staf tata usaha.</small>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-12">Pindah Ke</label>
+                          <div class="col-md-12">
+                            <input type="text" class="form-control form-control-line" id="pindah" name="pindah" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-12">Alasan Pindah</label>
+                          <div class="col-md-12">
+                            <textarea rows="5" class="form-control form-control-line" id="reason" name="reason"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-12">Kelas</label>
+                          <div class="col-sm-12">
+                            <select class="form-select shadow-none form-control-line" id="kelas" name="kelas">
+                              <option selected>Select Class</option>
+                              <option value="X Ak">X Akuntansi</option>
+                              <option value="X BR">X Bisnis Retail</option>
+                              <option value="X RPL">X Rekayasa Perangkat Lunak</option>
+                              <option value="X ACP">X Axioo Class Program</option>
+                              <option value="X TSM">X Teknik Sepeda Motor</option>
+                              <option value="X TKJ 1">X Teknik Komputer dan Jaringan 1</option>
+                              <option value="X TKJ 2">X Teknik Komputer dan Jaringan 2</option>
+                              <option value="X FKK">X Layanan Penunjang Kefarmasian Klinis dan Komunitas</option>
+                              <option value="X KC">X Layanan Penunjang Keperawatan dan Caregiving</option>
+                              <option value="XI AK">XI Akuntansi</option>
+                              <option value="XI BR">XI Bisnis Retail</option>
+                              <option value="XI RPL">XI Rekayasa Perangkat Lunak</option>
+                              <option value="XI ACP">XI Axioo Class Program</option>
+                              <option value="XI TKR">XI Teknik Kendaraan Ringan</option>
+                              <option value="XI TKJ">XI Teknik Komputer dan Jaringan</option>
+                              <option value="XI FKK 1">XI Layanan Penunjang Kefarmasian Klinis dan Komunitas 1</option>
+                              <option value="XI FKK 2">XI Layanan Penunjang Kefarmasian Klinis dan Komunitas 2</option>
+                              <option value="XII AK">XII Akuntansi</option>
+                              <option value="XII BR">XII Bisnis Retail</option>
+                              <option value="XII RPL 1">XII Rekayasa Perangkat Lunak 1</option>
+                              <option value="XII RPL 2">XII Rekayasa Perangkat Lunak 2</option>
+                              <option value="XII TKR">XII Teknik Kendaraan Ringan</option>
+                              <option value="XII TKJ">XII Teknik Komputer dan Jaringan</option>
+                              <option value="XII FKK 1">XII Layanan Penunjang Kefarmasian Klinis dan Komunitas 1</option>
+                              <option value="XII FKK 2">XII Layanan Penunjang Kefarmasian Klinis dan Komunitas 2</option>
+                              <!-- Add other options as needed -->
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-12">Tahun Ajaran</label>
+                          <div class="col-sm-12">
+                            <select class="form-select shadow-none form-control-line" id="year" name="year">
+                              <option value="2020/2021">2020/2021</option>
+                              <option value="2022/2023">2022/2023</option>
+                              <option value="2023/2024">2023/2024</option>
+                              <option value="2024/2025">2024/2025</option>
+                              <option value="2025/2026">2025/2026</option>
+                              <!-- Add other options as needed -->
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <button class="btn btn-success text-white" type="submit">Submit Data</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+              SimWakel SMK Muhammadiyah 1 Pringsewu Designed and Developed by <a href="https://jeriwilaga.github.io/Portofolio/">AgaDevelopment</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+
+    <script>
+      // Function to get URL parameters
+      function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          nis: params.get('nis'),
+          fullName: params.get('fullName'),
+          gender: params.get('gender'),
+          kelas: params.get('kelas')
+        };
+      }
+  
+      // Populate form fields with URL parameters
+      function populateForm() {
+        const params = getUrlParams();
+        
+        // Populate input fields
+        document.getElementById('nis').value = params.nis || '';
+        document.getElementById('fullName').value = params.fullName || '';
+        document.getElementById('gender').value = params.gender || 'Laki-Laki';
+        document.getElementById('kelas').value = params.kelas || '';
+      }
+  
+      // Call the function to populate form on page load
+      window.onload = populateForm;
+    </script>
+   
+<script>
+    // Check for existing history on page load
+    const history = localStorage.getItem('history');
+            if (!history) {
+                // If no history exists, redirect to login page
+                window.location.href = 'index.html'; // Change 'login.html' to your actual login page
+            }
+
+   // Fungsi untuk menambah data
+document.getElementById('myForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var formData = new FormData(this);
+
+  // URL web app dari Apps Script untuk menambah data
+  var url = 'https://script.google.com/macros/s/AKfycbzQ9QmKvO665sscVOxdThGgGRoORszrLLjAD3ITlxGBSB7GaaCGOz6VwfHl-x7gqrMY/exec';  // Ganti dengan URL Web App Anda
+  
+  // Ambil data untuk penghapusan dari URL
+  const params = new URLSearchParams(window.location.search);
+  const nisToDelete = params.get('nis'); // Ambil NIS dari URL untuk penghapusan
+  const namaToDelete = params.get('nama');
+  const kelasToDelete = params.get('kelas');
+  const genderToDelete = params.get('gender');
+  
+  // Sembunyikan alert sebelum kirim
+  document.getElementById("successAlert").classList.add("d-none");
+
+  fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+  })
+  .then(response => {
+      // Pesan berhasil dikirim
+      var successMessage = "Data berhasil dikirim.";
+
+      // Karena 'no-cors', kita tidak bisa mendapat respons asli, jadi secara default hanya menampilkan pesan sukses
+      document.getElementById('response').innerText = successMessage;
+
+      // Tampilkan alert sukses
+      var alertElement = document.getElementById("successAlert");
+      alertElement.classList.remove("d-none"); // Tampilkan alert
+      alertElement.innerText = successMessage;
+
+      // Reset form
+      this.reset();
+
+      // Scroll ke atas halaman
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Menambahkan efek smooth scroll
+      });
+
+      // Sembunyikan alert setelah 3 detik dan refresh halaman
+      setTimeout(function() {
+          alertElement.classList.add("d-none"); // Sembunyikan alert
+          location.reload(); // Refresh halaman
+      }, 3000); // 3000ms = 3 detik
+      
+      // Setelah data berhasil dikirim, lakukan penghapusan data dari spreadsheet
+      if (nisToDelete) {
+          fetch(`https://script.google.com/macros/s/AKfycbygSJ9B9gmrhRrGBD7dhsqjSHSsIJVebwUyefW74Ch1irrfFKxFg8CI1jGKyhQWAvKp6Q/exec?action=delete&nis=${nisToDelete}`)
+              .then(response => response.json()) // Parse JSON response
+              .then(data => {
+                  if (data.result === 'success') {
+                      console.log('Data deleted successfully!');
+                      // Tampilkan alert sukses
+                      showAlert('successAlert', 'Data deleted successfully!');
+                      
+                      // Redirect ke halaman mutasik.html setelah berhasil menghapus data
+                      window.location.href = 'mutasik.html'; // Arahkan ke mutasik.html setelah penghapusan berhasil
+                  } else {
+                      throw new Error(data.error || 'Failed to delete data');
+                  }
+              })
+              .catch(error => {
+                  console.error('Error!', error.message);
+                  window.location.href = 'mutasik.html';
+              });
+      }
+  })
+  .catch(error => {
+      // Jika ada kesalahan
+      var errorMessage = 'Gagal mengirim data.';
+      document.getElementById('response').innerText = errorMessage;
+
+      // Pastikan alert sukses tetap disembunyikan jika terjadi kesalahan
+      document.getElementById("successAlert").classList.add("d-none");
+  });
+});
+
+
+</script>
+
+    
+<script>
+  function logout() {
+      // Clear the history from local storage
+      localStorage.removeItem('history');
+      localStorage.removeItem('selectedClass');
+
+      // Redirect to index.html
+      window.location.href = 'index.html'; // Change 'index.html' to your actual homepage if different
+  }
+</script>
+
+
+</body>
+
+</html>

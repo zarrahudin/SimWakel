@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <title>SimWakel ||  Halaman Login</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/wakel.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <div class="flex items-center justify-center mb-6">
+            <img alt="FlexyLite logo" class="mr-2" height="40" src="assets/images/wakel.png" width="40"/>
+            <span class="text-2xl font-semibold">SimWakel</span>
+        </div>
+        <p class="text-center text-gray-500 mb-6">Aplikasi Absen wali kelas</p>
+        <form id="classForm">
+            <div class="mb-4">
+                <label class="block text-gray-700" for="username">Jurusan</label>
+                <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="username">
+                    <option value="X Ak">X Ak</option>
+                    <option value="X BR">X BR</option>
+                    <option value="X RPL">X RPL</option>
+                    <option value="X ACP">X ACP</option>
+                    <option value="X TSM">X TSM</option>
+                    <option value="X TKJ 1">X TKJ 1</option>
+                    <option value="X TKJ 2">X TKJ 2</option>
+                    <option value="X FKK">X FKK</option>
+                    <option value="X KC">X KC</option>
+                    <option value="XI Ak">XI Ak</option>
+                    <option value="XI BR">XI BR</option>
+                    <option value="XI RPL">XI RPL</option>
+                    <option value="XI ACP">XI ACP</option>
+                    <option value="XI TKR">XI TKR</option>
+                    <option value="XI TKJ">XI TKJ</option>
+                    <option value="XI FKK 1">XI FKK 1</option>
+                    <option value="XI FKK 2">XI FKK 2</option>
+                    <option value="XII Ak">XII Ak</option>
+                    <option value="XII BR">XII BR</option>
+                    <option value="XII RPL 1">XII RPL 1</option>
+                    <option value="XII RPL 2">XII RPL 2</option>
+                    <option value="XII TKR">XII TKR</option>
+                    <option value="XII TKJ">XII TKJ</option>
+                    <option value="XII FKK 1">XII FKK 1</option>
+                    <option value="XII FKK 2">XII FKK 2</option>
+                </select>
+            </div>
+            <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 p-2" type="submit">
+                Pilih Kelas
+            </button>
+        </form>
+        <p class="text-center text-gray-500 mt-6">
+            Ada Masalah ? 
+            <a class="text-blue-500" href="https://wa.me/6282289635649">Kontak Jeri Wilaga</a>
+        </p>
+    </div>
+
+    <script>
+         // Check for existing history on page load
+         const history = localStorage.getItem('history');
+        if (history) {
+            // If history exists, redirect to home page
+            window.location.href = 'home.html';
+        }
+        // Get the form element
+        const classForm = document.getElementById('classForm');
+
+        // Add an event listener to the form
+        classForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the selected class value
+            const selectedClass = document.getElementById('username').value;
+
+            // Get the existing history from local storage
+            const history = localStorage.getItem('history');
+
+            // If there is no existing history, create a new array
+            if (!history) {
+                localStorage.setItem('history', JSON.stringify([selectedClass]));
+            } else {
+                // If there is existing history, append the new selection to it
+                const historyArray = JSON.parse(history);
+                historyArray.push(selectedClass);
+                localStorage.setItem('history', JSON.stringify(historyArray));
+            }
+
+            // Save the selected class to local storage
+            localStorage.setItem('selectedClass', selectedClass);
+
+            // Redirect to the home page
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

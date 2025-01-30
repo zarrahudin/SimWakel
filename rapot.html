@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>SIM WAKEL || Halaman Rekap Rapot</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/wakel.png">
+    <!-- Custom CSS -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <style>
+        body {
+            font-family: 'YourPrimaryFont', 'FallbackFont', sans-serif;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="home.html">
+                        <b class="logo-icon">
+                            <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="dark-logo" />
+                            <img src="assets/images/wakel.png" alt="Flexy Admin Logo" class="light-logo" />
+                        </b>
+                        <span class="logo-text">
+                           <strong>SimWakel</strong> 
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
+                                    class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                                      <ul class="navbar-nav float-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/users/th.jpeg" alt="User Profile" class="rounded-circle" width="31">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="logout()">
+                                    <i class="ti-user m-r-5 m-l-5"></i> Logout
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="home.html" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard"></i>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="rekap.html" aria-expanded="false">
+                            <i class="mdi mdi-border-all"></i>
+                            <span class="hide-menu">Rekap Absen</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="javascript:void(0);" aria-expanded="false">
+                            <i class="mdi mdi-database"></i>
+                            <span class="hide-menu">Data Master</span>
+                        </a>
+                        <ul class="collapse first-level">
+                            <li class="sidebar-item">
+                                <a href="datas.html" class="sidebar-link">
+                                    <i class="mdi mdi-school"></i>
+                                    <span class="hide-menu">Data Siswa Binaan</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="mutasim.html" class="sidebar-link">
+                                    <i class="mdi mdi-account-switch"></i>
+                                    <span class="hide-menu">Mutasi Masuk</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="mutasik.html" class="sidebar-link">
+                                    <i class="mdi mdi-account-switch"></i>
+                                    <span class="hide-menu">Mutasi Keluar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="rapot.html" class="sidebar-link">
+                              <i class="mdi mdi-download"></i>
+                            <span class="hide-menu">Data Rapot</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="javascript:void(0);" class="sidebar-link" onclick="logout()">
+                            <i class="mdi mdi-logout"></i>
+                            <span class="hide-menu">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 d-flex align-items-center">
+                              <li class="breadcrumb-item"><a href="home.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Rekap Rapot</li>
+                            </ol>
+                          </nav>
+                        <h1 class="mb-0 fw-bold">Download Rapot</h1> 
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Rekap Rapot Kelas</h4>
+                                <h6 class="card-subtitle">Silahkan Pilih Terlebih dahulu kelas lalu tekan tombol pilih kelas</h6>
+                             
+                            <form class="row value-forms" name="peng">
+                                
+                                <div class="col-md-8 text-center">
+                                  <label for="inputPassword2" class="visually-hidden">Masukan Kelas</label>
+                                  <select class="form-select" aria-label="Default select example" name="jurusan">
+                                    <option selected>Open this select menu</option>
+                                    <option value="X Ak">X Akuntansi</option>
+                                    <option value="X BR">X Bisnis Retail</option>
+                                    <option value="X RPL">X Rekayasa Perangkat Lunak</option>
+                                    <option value="X ACP">X Axioo Class Program</option>
+                                    <option value="X TSM">X Teknik Sepeda Motor</option>
+                                    <option value="X TKJ 1">X Teknik Komputer dan Jaringan 1</option>
+                                    <option value="X TKJ 2">X Teknik Komputer dan Jaringan 2</option>
+                                    <option value="X FKK">X Layanan Penunjang Kefarmasian Klinis dan Komunitas</option>
+                                    <option value="X KC">X Layanan Penunjang Keperawatan dan Caregiving</option>
+                                    <option value="XI AK">XI Akuntansi</option>
+                                    <option value="XI BR">XI Bisnis Retail</option>
+                                    <option value="XI RPL">XI Rekayasa Perangkat Lunak</option>
+                                    <option value="XI ACP">XI Axioo Class Program</option>
+                                    <option value="XI TKR">XI Teknik Kendaraan Ringan</option>
+                                    <option value="XI TKJ">XI Teknik Komputer dan Jaringan</option>
+                                    <option value="XI FKK 1">XI Layanan Penunjang Kefarmasian Klinis dan Komunitas 1</option>
+                                    <option value="XI FKK 2">XI Layanan Penunjang Kefarmasian Klinis dan Komunitas 2</option>
+                                    <option value="XII AK">XII Akuntansi</option>
+                                    <option value="XII BR">XII Bisnis Retail</option>
+                                    <option value="XII RPL 1">XII Rekayasa Perangkat Lunak 1</option>
+                                    <option value="XII RPL 2">XII Rekayasa Perangkat Lunak 2</option>
+                                    <option value="XII TKR">XII Teknik Kendaraan Ringan</option>
+                                    <option value="XII TKJ">XII Teknik Komputer dan Jaringan</option>
+                                    <option value="XII FKK 1">XII Layanan Penunjang Kefarmasian Klinis dan Komunitas 1</option>
+                                    <option value="XII FKK 2">XII Layanan Penunjang Kefarmasian Klinis dan Komunitas 2</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-4 p-2 text-center">
+                                    <button type="submit" class="btn btn-primary btn-kirim">Pilih Kelas</button>
+                                    <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                      <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                                      <span role="status">Loading...</span>
+                                    </button>
+                                </div>
+                            
+                              
+                            </form>
+                        <div class="alert alert-success d-none my-alert" role="alert">
+                            <h4 class="alert-heading">Cetak Absen</h4>
+                            <p>Silahkan Download Segera Karna alert ini akan hilang beberapa menit, jika ingin mendownload lagi silahkan pilih kelas lagi terima kasih ..</p>
+                            <hr>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='https://docs.google.com/spreadsheets/d/1YVHmy2k68dOgzV1661xrCmBGzs8gDDi0OBi1l5ilm8Y/export?format=pdf&gid=1427740679&size=F4'">
+                                Download Rekap Absen
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+               
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex align-items-center">
+                                    <div>
+                                        <h4 class="card-title">Data Rapot Siswa/i</h4>
+                                        <h6 class="card-subtitle">SMK Muhammadiyah 1 Pringsewu</h6>
+                                    </div>
+                                    <div class="ms-auto d-flex no-block align-items-center">
+                                        <!-- <ul class="list-inline dl d-flex align-items-center m-r-15 m-b-0">
+                                            <li class="list-inline-item d-flex align-items-center text-info"><i class="fa fa-circle font-10 me-1"></i> Ample</li>
+                                            <li class="list-inline-item d-flex align-items-center text-primary"><i class="fa fa-circle font-10 me-1"></i> Pixel</li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+                                 <!-- title -->
+                                 <div class="table-responsive">
+                                    <table class="table mb-0 table-hover align-middle text-nowrap" id="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">Nis</th>
+                                                <th class="border-top-0">Nama Siswa</th>
+                                                <th class="border-top-0">Status Rapot</th> 
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                SimWakel SMK Muhammadiyah 1 Pringsewu Designed and Developed by <a href="https://jeriwilaga.github.io/Portofolio/">AgaDevelopment</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+
+<script>
+      // Check for existing history on page load
+      const history = localStorage.getItem('history');
+            if (!history) {
+                // If no history exists, redirect to login page
+                window.location.href = 'index.html'; // Change 'login.html' to your actual login page
+            }
+            
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwvwyaq2D_Ggtewx6hH165BDyMEDUrniTaweXEsfiaMgX9jYACg6GS5etl0AIZ3tevz/exec'; // Replace with your actual URL
+    const form = document.forms['peng'];
+   
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.my-alert');
+    const forms = document.querySelector('.value-forms');
+
+    form.addEventListener('submit', e => {
+    e.preventDefault();
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        myAlert.classList.toggle('d-none');
+        form.classList.toggle('d-none');
+        setTimeout(() => {
+            myAlert.classList.add('d-none');
+            form.classList.toggle('d-none');
+        }, 10000);
+        form.reset();
+        console.log('Success!', response);
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+        
+  </script>
+<script>
+    function logout() {
+        // Clear the history from local storage
+        localStorage.removeItem('history');
+        localStorage.removeItem('selectedClass');
+
+        // Redirect to index.html
+        window.location.href = 'index.html'; // Change 'index.html' to your actual homepage if different
+    }
+</script>
+
+<script>
+const apiEndpoint = 'https://script.google.com/macros/s/AKfycbyltL_kd-QOnItFPz87hzSTozDhnhhN9IZWsk8kZIzD7FgOXAC9AxTV1S_KqZVtPv3L/exec';
+const dataTableBody = document.querySelector('#data-table tbody');
+
+document.addEventListener('DOMContentLoaded', loadData);
+
+function loadData() {
+    const selectedClass = localStorage.getItem('selectedClass') || '';
+
+    if (!selectedClass) {
+        console.error('No class selected!');
+        return;
+    }
+
+    console.log("Mengirim request ke API:", apiEndpoint, "?action=read&jurusan=", selectedClass);
+
+    dataTableBody.innerHTML = ''; // Kosongkan tabel sebelum memuat ulang
+
+    fetch(`${apiEndpoint}?action=read&jurusan=${encodeURIComponent(selectedClass)}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Data dari API:", data); // Debug hasil API
+
+            if (data.result === "Aksi tidak valid!" || data.result === "Jurusan tidak boleh kosong!") {
+                console.error("Error API:", data.result);
+                dataTableBody.innerHTML = `<tr><td colspan="3" class="text-center text-danger">${data.result}</td></tr>`;
+                return;
+            }
+
+            if (!Array.isArray(data) || data.length === 0) {
+                console.warn('No data available');
+                dataTableBody.innerHTML = `<tr><td colspan="3" class="text-center">Data tidak ditemukan</td></tr>`;
+                return;
+            }
+
+            dataTableBody.innerHTML = data.map(stat => `
+                <tr>
+                    <td>${stat.nis}</td>
+                    <td>${stat.nama}</td>
+                   <td class="${getStatusClass(stat.status)}">${stat.status}</td>
+
+                </tr>
+            `).join('');
+        })
+        .catch(error => {
+            console.error('Error fetching data!', error);
+            dataTableBody.innerHTML = `<tr><td colspan="3" class="text-center text-danger">Terjadi kesalahan saat mengambil data</td></tr>`;
+        });
+}
+function getStatusClass(status) {
+    switch (status.toLowerCase()) {
+        case "belum dikumpul":
+            return "bg-danger text-white rounded px-2 py-1"; // Merah, melengkung kecil
+        case "sudah dikumpul":
+            return "bg-success text-white rounded px-2 py-1"; // Hijau, melengkung kecil
+        case "dipinjam":
+            return "bg-warning text-white rounded px-2 py-1"; // Kuning, melengkung kecil
+        default:
+            return "rounded px-2 py-1"; // Tetap melengkung meskipun status lain
+    }
+}
+
+
+
+</script>
+</html>
